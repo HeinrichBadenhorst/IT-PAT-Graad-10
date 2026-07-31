@@ -1,10 +1,10 @@
 object Sales_Screen: TSales_Screen
   Left = 0
   Top = 0
-  Caption = 'Bestel wat jy wil h'#234':'
+  Caption = 'Sales_Screen'
   ClientHeight = 441
   ClientWidth = 624
-  Color = clSkyBlue
+  Color = clHighlight
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12

@@ -4,12 +4,15 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Mask, Vcl.ExtCtrls;
 
 type
-  TWelkom_Blad = class(TForm)
-    btn1: TButton;
-    procedure btn1Click(Sender: TObject);
+  TfrmTekenIn = class(TForm)
+    btnLogIn: TButton;
+    lbledtUsername: TLabeledEdit;
+    lbledtPassword: TLabeledEdit;
+    lblTekenIn: TLabel;
+    procedure btnLogInClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -17,7 +20,7 @@ type
   end;
 
 var
-  frmWelkom_Blad: TWelkom_Blad;
+  frmWelkom_Blad: TfrmTekenIn;
 
 implementation
 
@@ -26,12 +29,11 @@ implementation
 uses
   Sales_Screen_u;
 
-procedure TWelkom_Blad.btn1Click(Sender: TObject);
+procedure TfrmTekenIn.btnLogInClick(Sender: TObject);
 begin
-
+  if (lbledtUsername.Text = 'admin') and (lbledtPassword.Text = 'admin') then
   frmWelkom_Blad.Hide;
   frmSales_Screen.Show;
-
 end;
 
 end.

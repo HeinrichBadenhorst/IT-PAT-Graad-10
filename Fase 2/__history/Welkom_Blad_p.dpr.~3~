@@ -2,7 +2,7 @@ program Welkom_Blad_p;
 
 uses
   Vcl.Forms,
-  Welkom_Blad_u in 'Welkom_Blad_u.pas' {frmTekenIn},
+  Welkom_Blad_u in 'Welkom_Blad_u.pas' {Welkom_Blad},
   Sales_Screen_u in 'Sales_Screen_u.pas' {Sales_Screen};
 
 {$R *.res}
@@ -10,7 +10,7 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TfrmWelkom_Blad, frmWelkom_Blad);
-  Application.CreateForm(TfrmSales_Screen, frmSales_Screen);
+  Application.CreateForm(TWelkom_Blad, frmWelkom_Blad);
+  Application.CreateForm(TSales_Screen, frmSales_Screen);
   Application.Run;
 end.
