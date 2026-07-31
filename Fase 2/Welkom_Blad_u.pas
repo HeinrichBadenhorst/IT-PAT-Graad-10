@@ -4,10 +4,12 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
 
 type
-  TForm1 = class(TForm)
+  TWelkom_Blad = class(TForm)
+    btn1: TButton;
+    procedure btn1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -15,10 +17,21 @@ type
   end;
 
 var
-  Form1: TForm1;
+  frmWelkom_Blad: TWelkom_Blad;
 
 implementation
 
 {$R *.dfm}
+
+uses
+  Sales_Screen_u;
+
+procedure TWelkom_Blad.btn1Click(Sender: TObject);
+begin
+
+  frmWelkom_Blad.Hide;
+  frmSales_Screen.Show;
+
+end;
 
 end.
