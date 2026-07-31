@@ -124,7 +124,7 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="Welkom_Blad_u.pas">
-            <Form>frmTekenIn</Form>
+            <Form>Welkom_Blad</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Sales_Screen_u.pas">
